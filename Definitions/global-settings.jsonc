@@ -8,7 +8,7 @@
             "tenantId": "f51f6784-21b6-432f-9def-0f5c2b6d70fb",
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/EpacDev",
             "desiredState": {
-                "strategy": "full",
+                "strategy": "ownedOnly",
                 "keepDfcSecurityAssignments": false
             },
             "managedIdentityLocation": "westeurope"
@@ -19,7 +19,7 @@
             "tenantId": "f51f6784-21b6-432f-9def-0f5c2b6d70fb",
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/pels",
             "desiredState": {
-                "strategy": "full",
+                "strategy": "ownedOnly",
                 "keepDfcSecurityAssignments": false
             },
             "managedIdentityLocation": "westeurope"
