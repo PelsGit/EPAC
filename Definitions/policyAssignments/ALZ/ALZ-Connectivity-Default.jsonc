@@ -3,7 +3,7 @@
     "nodeName": "/Connectivity/",
     "scope": {
         "epac-dev": [ // Replace with your EPAC environment name and validate the management group listed below exists
-            "/providers/Microsoft.Management/managementGroups/pels-platform-connectivity"
+            "/providers/Microsoft.Management/managementGroups/EpacDev"
         ],
         "tenant": [ // Replace with your EPAC environment name and validate the management group listed below exists
         "/providers/Microsoft.Management/managementGroups/pels-platform-connectivity"
