@@ -53,24 +53,13 @@ jobs:
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
 
-  nonprodPlan:
-    name: Plan nonprod
+  tenantPlan:
+    name: Plan tenant
     needs: [deployPolicy, deployRoles]
     uses: ./.github/workflows/plan.yml
     with:
-      pacEnvironmentSelector: nonnprod
-      planGitHubEnvironment: NONPROD-PLAN
-      PAC_OUTPUT_FOLDER: ./Output
-      PAC_DEFINITIONS_FOLDER: ./Definitions
-    secrets: inherit
-
-  prodPlan:
-    name: Plan prod
-    needs: [deployPolicy, deployRoles]
-    uses: ./.github/workflows/plan.yml
-    with:
-      pacEnvironmentSelector: prod
-      planGitHubEnvironment: PROD-PLAN
+      pacEnvironmentSelector: tenant
+      planGitHubEnvironment: TENANT-PLAN
       PAC_OUTPUT_FOLDER: ./Output
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit

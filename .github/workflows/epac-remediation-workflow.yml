@@ -7,6 +7,7 @@ name: EPAC Remediation
 on:
   schedule:
     - cron: '0 5 * * *' # # UTC 5:00 AM daily, midnight EST
+  workflow_dispatch:
 
 env:
   PAC_OUTPUT_FOLDER: ./Output
@@ -26,20 +27,11 @@ jobs:
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
 
-  nonnprod:
-    name: 'Remediate nonprod environment'
+  tenant:
+    name: 'Remediate tenant environment'
     uses: ./.github/workflows/remediate.yml
     with:
-      pacEnvironmentSelector: nonnprod
-      planGitHubEnvironment: NONPROD-REMEDIATE-POLICY
-      PAC_DEFINITIONS_FOLDER: ./Definitions
-    secrets: inherit
-
-  prod:
-    name: 'Remediate prod environment'
-    uses: ./.github/workflows/remediate.yml
-    with:
-      pacEnvironmentSelector: prod
-      planGitHubEnvironment: PROD-REMEDIATE-POLICY
+      pacEnvironmentSelector: tenant
+      planGitHubEnvironment: TENANT-REMEDIATE-POLICY
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
