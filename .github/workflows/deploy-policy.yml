@@ -17,7 +17,7 @@ on:
         type: string
 
 env:
-  PAC_INPUT_FOLDER: "$(GITHUB_WORKSPACE)"
+  PAC_INPUT_FOLDER: ${{ inputs.PAC_INPUT_FOLDER }}
   PAC_DEFINITIONS_FOLDER: ${{ inputs.PAC_DEFINITIONS_FOLDER }}
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download Artifact
-        # If you are using GHES, use v3 instead of v4. See https://github.com/actions/download-artifact#v4---whats-new for more information. adding text to run pipie
+        # If you are using GHES, use v3 instead of v4. See https://github.com/actions/download-artifact#v4---whats-new for more information.
         uses: actions/download-artifact@v4
         with:
           name: plans-${{ inputs.pacEnvironmentSelector }}
