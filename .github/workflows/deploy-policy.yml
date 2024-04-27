@@ -17,7 +17,7 @@ on:
         type: string
 
 env:
-  PAC_INPUT_FOLDER: "$(GITHUB_WORKSPACE)/"
+  PAC_INPUT_FOLDER: "$(GITHUB_WORKSPACE)"
   PAC_DEFINITIONS_FOLDER: ${{ inputs.PAC_DEFINITIONS_FOLDER }}
 
 jobs:
