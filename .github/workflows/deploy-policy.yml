@@ -54,5 +54,5 @@ jobs:
         uses: azure/powershell@v2
         with:
           inlineScript: |
-            Deploy-PolicyPlan -PacEnvironmentSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue
+            Deploy-PolicyPlan -PacEnvironmentSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue -InputFolder "$(GITHUB_WORKSPACE)/plans-epac-dev"
           azPSVersion: "latest"
