@@ -17,7 +17,7 @@ on:
         type: string
 
 env:
-  PAC_INPUT_FOLDER: ${{ inputs.PAC_INPUT_FOLDER }}
+  PAC_INPUT_FOLDER: "./"
   PAC_DEFINITIONS_FOLDER: ${{ inputs.PAC_DEFINITIONS_FOLDER }}
 
 jobs:
