@@ -33,6 +33,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: plans-${{ inputs.pacEnvironmentSelector }}
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Install Required Modules
         uses: Azure/powershell@v2
