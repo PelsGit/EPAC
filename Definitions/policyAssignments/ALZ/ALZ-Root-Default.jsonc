@@ -2,9 +2,12 @@
     "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
     "nodeName": "/Root/",
     "scope": {
-        "tenant1": [ // Replace with your EPAC environment name and validate the management group listed below exists
-            "/providers/Microsoft.Management/managementGroups/pels"
-        ]
+        "epac-dev": [ // Replace with your EPAC environment name and validate the management group listed below exists
+            "/providers/Microsoft.Management/managementGroups/EpacDev"
+        ],
+        "tenant": [ // Replace with your EPAC environment name and validate the management group listed below exists
+        "/providers/Microsoft.Management/managementGroups/pels"
+    ]
     },
     "parameters": {
         "logAnalytics": "/subscriptions/6def8cbe-7f14-4da2-bd1c-bff0fd42f881/resourceGroups/EPAC-MGT", // Replace with your central Log Analytics workspace ID
